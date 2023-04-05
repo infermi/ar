@@ -5,8 +5,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'arimo': 'Arimo',
-                'sans': 'Fredoka'
+                'varela': 'Varela Round',
+                'sans': 'Open Sans',
+                'heebo': 'Heebo'
             },
 
             variants: {
@@ -24,5 +25,5 @@ module.exports = {
         },
 
     },
-    plugins: [require("tailwindcss-animation-delay"), require('prettier-plugin-tailwindcss')],
+    plugins: [require("tailwindcss-animation-delay")],
 }

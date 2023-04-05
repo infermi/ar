@@ -22,7 +22,7 @@ import Contact from "../components/Contact.astro";
         class="aspect-square w-1/2 rounded-full drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)] transition-all md:w-1/6"
       />
       <h1
-        class="text-5xl font-bold text-gray-900 drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]"
+        class="font-varela text-5xl font-bold text-gray-900 drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]"
       >
         עיצוב הטבע לחיים
         <span class="font-bold text-green-700">משובחים</span>
@@ -31,56 +31,138 @@ import Contact from "../components/Contact.astro";
         <a
           href="#"
           class="mt-1 flex flex-row items-center justify-between gap-4 rounded-2xl border-b-4 border-green-800 bg-green-600 px-2 py-1 pr-4 text-center text-lg text-white transition-all hover:mt-0 hover:border-b-8 active:translate-y-1 active:border-b-4"
-          ><i class="fa-brands fa-whatsapp"></i> Whatsapp</a
-        >
+          >Whatsapp<i class="fa-brands fa-whatsapp"></i>
+        </a>
         <a
           href="#"
           class="mt-1 flex flex-row items-center justify-between gap-4 rounded-2xl border-b-4 border-gray-400 bg-white px-2 py-1 pr-4 text-center text-lg text-black transition-all hover:mt-0 hover:border-b-8 active:translate-y-1 active:border-b-4"
-          ><i class="fa-regular fa-face-smile"></i> למחשבון הצעת מחיר</a
-        >
+          >למחשבון הצעת מחיר<i class="fa-regular fa-face-smile"></i>
+        </a>
       </div>
     </section>
-
-    <section class="w-full">
-      <div
-        class="flex flex-col justify-center gap-x-28 gap-y-5 px-0 py-5 text-center md:flex-row md:px-10"
-      >
-        <div>
-          <i class="fa-regular fa-heart text-5xl text-gray-700"></i>
-          <p class="text-xl">full warrenty</p>
-        </div>
-        <div>
-          <i class="fa-regular fa-user text-5xl text-gray-700"></i>
-          <p class="text-xl">full user</p>
-        </div>
-        <div>
-          <i class="fa-regular fa-clock text-5xl text-gray-700"></i>
-          <p class="text-xl">full clock</p>
-        </div>
-        <div>
-          <i class="fa-regular fa-circle-check text-5xl text-gray-700"></i>
-          <p class="text-xl">full checkmark</p>
-        </div>
+    <div
+      class="my-12 mx-auto flex w-full justify-around gap-y-5 py-5 text-center text-xl font-medium max-sm:flex-col xl:text-2xl"
+    >
+      <div>
+        <i
+          class="fa-regular fa-heart text-5xl text-gray-700 transition-all hover:scale-110 lg:text-6xl"
+        ></i>
+        <p class="">אחריות מלאה</p>
       </div>
-
-      <div class="flex flex-col items-center justify-center text-center">
-        <h1 class="text-5xl font-bold">bathrooms</h1>
-        <Sep />
-        <p class="max-w-5xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non earum et
-          quasi, eligendi, illum consequuntur accusamus laudantium neque impedit
-          enim voluptas porro optio? Nam, consectetur.
-        </p>
+      <div>
+        <i
+          class="fa-regular fa-user text-5xl text-gray-700 transition-all hover:scale-110 lg:text-6xl"
+        ></i>
+        <p class="">צוות מנוסה וחביב</p>
       </div>
-    </section>
-
-    <section class="pt-5 text-center">
-      <h1 class="text-4xl">קצת עלינו</h1>
+      <div>
+        <i
+          class="fa-regular fa-clock text-5xl text-gray-700 transition-all hover:scale-110 lg:text-6xl"
+        ></i>
+        <p class="">שעות עבודה ותקציב קבועות</p>
+      </div>
+      <div>
+        <i
+          class="fa-regular fa-circle-check text-5xl text-gray-700 transition-all hover:scale-110 lg:text-6xl"
+        ></i>
+        <p class="">תכנון ותיאום ציפיות לפרויקט</p>
+      </div>
+    </div>
+    <section
+      class="flex w-full flex-col items-center justify-center px-10 text-center"
+    >
+      <h1 class="font-varela text-5xl font-bold xl:text-6xl">שירותים</h1>
       <Sep />
-      <p></p>
+      <h4 class="mb-2 font-heebo text-lg text-gray-500 md:text-2xl xl:text-3xl">
+        אנו בונים מתחזקים ומשדרגים את גינת החלומות שלכם
+      </h4>
+      <p class="max-w-5xl text-lg md:text-2xl xl:text-3xl">
+        אנו מתמחים בהקמת גנים ירוקים וחסרי פשרות עם תפיסה ייחודית לפרטיות
+        ואסתטיקה. חברתנו מספקת מגוון שירותי הקמה, עיצוב ושיפוץ לגנים ונדל"ן. <br
+        />
+        כמו כן, אנו מספקים שירותי תחזוקה לגנים ונדל"ן כדי להבטיח גידול נכון וטיפול
+        בסביבה הירוקה שלכם. בנוסף, אנו מתמחים בהקמת גגות ירוקים, בניית פרגולות ובמספקים
+        שירותי פיתוח והקמת כניסות ובריכות שחייה לגינות שלכם.
+      </p>
+    </section>
+    <section
+      class="mt-8 flex w-full flex-col items-center justify-center px-10 text-center"
+    >
+      <h1 class="font-varela text-3xl font-bold xl:text-4xl">למה אנחנו</h1>
+      <Sep />
+
+      <p class="max-w-5xl text-lg md:text-2xl xl:text-3xl">
+        אנחנו לא רק יוצרים גנים יפים, אנחנו מעצבים מרחבי חוץ אישיים שמשפרים את
+        איכות החיים שלכם. הצוות המיומן שלנו משתמש בחומרי בניין וצמחים באיכות
+        גבוהה כדי לספק תוצאות מדהימות שמחזיקות לאורך זמן.
+      </p>
+
+      <h4 class="mt-2 font-heebo text-lg font-bold md:text-2xl xl:text-3xl">
+        מהרעיון ועד התחזוקה, אנחנו איתכם בכל שלב. יחדיו, נהפוך את החזון שלכם
+        למציאות.
+      </h4>
     </section>
 
-    <Contact />
+    <a
+      href="#"
+      class="mx-auto mt-3 flex w-56 flex-row items-center justify-between gap-4 rounded-2xl border-b-4 border-gray-300 bg-gray-600 px-2 py-1 pr-4 text-center text-lg text-white transition-all hover:mt-2 hover:border-b-8 active:translate-y-1 active:border-b-4"
+      >למחשבון הצעת מחיר<i class="fa-regular fa-face-smile"></i>
+    </a>
+
+    <img
+      src="/ar3.jpg"
+      alt=""
+      class="mt-7 h-[260px] w-full object-cover object-center xl:h-[560px]"
+    />
+
+    <section class="w-full space-y-3 px-12 pt-24 text-center">
+      <h1 class="font-varela text-6xl font-bold">משדרגים לך את הגינה</h1>
+      <h3>השאירו פרטים ונחזור אליכם בקרוב</h3>
+      <form
+        action="https://formsubmit.co/maorrachmiel@gmail.com"
+        class="mx-auto space-y-8 lg:w-3/4 xl:w-1/2"
+        onsubmit=""
+        method="post"
+      >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 text-base text-gray-900 shadow-sm"
+          required
+          placeholder="שם מלא"
+        />
+
+        <input
+          type="number"
+          name="phone"
+          id="phone"
+          class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-full border border-gray-300 bg-gray-50 p-2.5 text-base text-gray-900 shadow-sm"
+          required
+          placeholder="מספר טלפון"
+        />
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-3xl border border-gray-300 bg-gray-50 p-2.5 text-base text-gray-900 shadow-sm"
+          style="direction:RTL;"
+          placeholder="הודעה (לא חובה)"></textarea>
+
+        <button
+          type="submit"
+          class="w-full rounded-full bg-gray-900 py-2 text-center font-heebo text-xl font-semibold text-white shadow-sm transition-all duration-150 hover:scale-105 hover:shadow-md focus:outline-none focus:ring-4"
+          >חזור אליי!</button
+        >
+      </form>
+    </section>
+    <img
+      src="/ar2.jpg"
+      alt=""
+      class="mt-7 h-[260px] w-full object-cover object-center xl:h-[560px]"
+    />
+    <section></section>
   </main>
 
   <!-- dwad -->
