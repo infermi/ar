@@ -34,7 +34,7 @@ import Contact from "../components/Contact.astro";
           >Whatsapp<i class="fa-brands fa-whatsapp"></i>
         </a>
         <a
-          href="#"
+          href="#calculator"
           class="mt-1 flex flex-row items-center justify-between gap-4 rounded-2xl border-b-4 border-gray-400 bg-white px-2 py-1 pr-4 text-center text-lg text-black transition-all hover:mt-0 hover:border-b-8 active:translate-y-1 active:border-b-4"
           >למחשבון הצעת מחיר<i class="fa-regular fa-face-smile"></i>
         </a>
@@ -104,7 +104,7 @@ import Contact from "../components/Contact.astro";
     </section>
 
     <a
-      href="#"
+      href="#calculator"
       class="mx-auto mt-3 flex w-56 flex-row items-center justify-between gap-4 rounded-2xl border-b-4 border-gray-300 bg-gray-600 px-2 py-1 pr-4 text-center text-lg text-white transition-all hover:mt-2 hover:border-b-8 active:translate-y-1 active:border-b-4"
       >למחשבון הצעת מחיר<i class="fa-regular fa-face-smile"></i>
     </a>
@@ -159,13 +159,14 @@ import Contact from "../components/Contact.astro";
     </section>
 
     <section
+      id="calculator"
       class="flex h-screen w-full flex-col items-center justify-center space-y-3 bg-stone-900 px-5 text-white"
     >
       <h1 class="font-heebo text-6xl font-black">מחשבון הצעת מחיר</h1>
       <h3 class="font-heebo text-3xl font-bold">מלאו את הפרטים ונחזור אליכם</h3>
       <form
         id="regForm"
-        class="w-full rounded-full border-white py-12 px-24 sm:border-2"
+        class="w-full rounded-full border-white py-12 px-24 sm:border-2 lg:py-24"
       >
         <div class="tab space-y-4" style="display: none;">
           <label for="fname" class="text-center font-varela text-4xl font-bold">
@@ -191,7 +192,7 @@ import Contact from "../components/Contact.astro";
             לאחר מילוי הפרטים בטופס זה, אנחנו נייצר עבורך הצעת מחיר
           </label>
 
-          <div class="flex h-5 items-center">
+          <div class="flex h-5 items-center justify-center gap-3">
             <input
               id="checkbox"
               name="מסכים_לדיוור"
