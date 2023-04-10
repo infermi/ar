@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Sep from "../components/Sep.astro";
-import Service from "../components/Service.astro";
-import Contact from "../components/Contact.astro";
+import Gallary from "../components/Gallary.astro";
 ---
 
 <!-- 
@@ -14,7 +13,7 @@ import Contact from "../components/Contact.astro";
 <Layout title="DPgarden">
   <main class="relative">
     <section
-      class="flex h-screen w-full flex-col items-center justify-center gap-4 bg-[url(ar1.jpg)] bg-cover bg-center text-center"
+      class="flex h-screen w-full flex-col items-center justify-center gap-4 bg-[url(ar1.jpg)] bg-cover bg-fixed bg-center text-center"
     >
       <img
         src="logo.jpg"
@@ -109,15 +108,16 @@ import Contact from "../components/Contact.astro";
       >למחשבון הצעת מחיר<i class="fa-regular fa-face-smile"></i>
     </a>
 
-    <img
-      src="/ar3.jpg"
-      alt=""
-      class="mt-7 h-[260px] w-full object-cover object-center xl:h-[560px]"
-    />
+    <div
+      class="mt-7 h-[260px] w-full bg-[url(/ar3.jpg)] object-cover object-center xl:h-[560px]"
+    >
+    </div>
 
     <section class="w-full space-y-3 px-12 pb-16 pt-24 text-center">
-      <h1 class="font-varela text-6xl font-bold">משדרגים לך את הגינה</h1>
-      <h3>השאירו פרטים ונחזור אליכם בקרוב</h3>
+      <h1 class="font-varela text-4xl font-bold md:text-5xl lg:text-6xl">
+        משדרגים לך את הגינה
+      </h1>
+      <h3 class="font-vare text-2xl">השאירו פרטים ונחזור אליכם בקרוב</h3>
       <form
         action="https://formsubmit.co/maorrachmiel@gmail.com"
         class="mx-auto space-y-8 lg:w-3/4 xl:w-1/2"
@@ -157,13 +157,40 @@ import Contact from "../components/Contact.astro";
         >
       </form>
     </section>
-    <img
-      src="/grass.jpg"
-      alt=""
-      class="mt-7 h-[260px] w-full object-cover object-center xl:h-[560px]"
-    />
+    <div
+      class="mt-7 h-[260px] w-full bg-[url(/pargula.jpg)] bg-fixed object-cover object-center xl:h-[560px]"
+    >
+    </div>
     <section class="px-3 py-8">
-      <h4 class="font-varela text-5xl font-bold">עיצוב גינות</h4>
+      <h4 class="font-varela text-4xl font-bold md:text-5xl">
+        צוות מקצועי ומנוסה
+      </h4>
+      <Sep />
+      <p class="mx-auto max-w-5xl text-lg md:text-2xl">
+        אנו מומחים בתחום ההקמה והשיפוץ של גנים, אנו מציעים שירותים איכותיים
+        ומקצועיים ללקוחותינו בישראל ובארצות הברית. אנו עובדים בתחום זה מעל חמש
+        שנים בארצות הברית ומספקים פתרונות חדשניים ואקולוגיים ללקוחותינו.
+      </p>
+      <p class="mx-auto mt-4 max-w-5xl text-lg md:text-2xl lg:mt-6">
+        ניסיון רב בתחום הגנות ירוקות, הקמת בריכות, פרגולות ואזורי ישיבה, הופכים
+        אותנו לחברה אמינה ומומלצת בתחום, עם צוות מקצועי שמתמחה בכל אחד מהתחומים.
+        הגישה האישית והקפדה על הפרטים הקטנים מבטיחים ללקוחותיה תוצאות מרשימות
+        ואסתטיות שלא תשכחו לעולם.
+      </p>
+      <a
+        href="#calculator"
+        class="mx-auto mt-3 flex w-fit flex-row items-center justify-between gap-4 whitespace-nowrap rounded-2xl border-b-4 border-gray-300 bg-stone-800 px-2 py-1 pr-4 text-center text-lg text-white transition-all hover:mt-2 hover:border-b-8 active:translate-y-1 active:border-b-4"
+        >למחשבון הצעת מחיר לעצוב גינה<i class="fa-regular fa-face-smile"></i>
+      </a>
+    </section>
+    <div
+      class="mt-7 h-[260px] w-full bg-[url(/pargula.jpg)] bg-fixed object-cover object-center xl:h-[560px]"
+    >
+    </div>
+    <section class="px-3 py-8">
+      <h4 class="font-varela text-4xl font-bold md:text-5xl">
+        גינות יפיפיות שנשארות לזמן רב
+      </h4>
       <Sep />
       <p class="mx-auto max-w-5xl text-lg md:text-2xl">
         אנו מתאימים את העיצוב וההקמה לצרכי הלקוח והסביבה בה הגן יוקם. אנו מתמחים
@@ -194,7 +221,7 @@ import Contact from "../components/Contact.astro";
     <h3 class="font-heebo text-3xl font-bold">מלאו את הפרטים ונחזור אליכם</h3>
     <form
       id="regForm"
-      class="w-full rounded-full border-white py-12 px-24 sm:border-2 lg:py-24"
+      class="w-full rounded-full border-white py-12 px-12 sm:border-2 lg:px-24 lg:py-24"
     >
       <div class="tab space-y-4" style="display: none;">
         <label for="fname" class="text-center font-varela text-4xl font-bold">
@@ -399,6 +426,23 @@ import Contact from "../components/Contact.astro";
       </div>
     </form>
   </section>
+  <section class="w-full">
+    <h1 class="font-heebo text-6xl font-extrabold text-stone-800">גלריה</h1>
+    <Gallary />
+  </section>
+  <footer class="z-20 bg-stone-800 shadow-xl">
+    <div
+      class="container mx-auto w-full p-4 text-slate-200 md:flex md:items-center md:justify-between md:p-6"
+    >
+      <span class="text-2xl lg:text-4xl">
+        עוצב על ידי <a
+          href="https://www.facebook.com/profile.php?id=100090172908011"
+          class="text-3xl font-semibold tracking-wide text-green-700 hover:underline lg:text-5xl"
+          >מאור רחמיאל</a
+        >
+      </span>
+    </div>
+  </footer>
 </Layout>
 <!-- step form -->
 <script is:inline>
