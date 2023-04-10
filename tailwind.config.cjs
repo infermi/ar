@@ -18,7 +18,7 @@ module.exports = {
             },
             keyframes: {
                 fadeIn: {
-                    "0%": { opacity: 0, transform: 'translate(0, 50px)' },
+                    "0%": { opacity: 0, transform: 'translate(0, 30px)' },
                     "100%": { opacity: 1 }
                 }
             }
