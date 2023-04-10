@@ -157,307 +157,343 @@ import Contact from "../components/Contact.astro";
         >
       </form>
     </section>
-
-    <section
-      id="calculator"
-      class="flex h-screen w-full flex-col items-center justify-center space-y-3 bg-stone-900 px-5 text-white"
-    >
-      <h1 class="font-heebo text-6xl font-black">מחשבון הצעת מחיר</h1>
-      <h3 class="font-heebo text-3xl font-bold">מלאו את הפרטים ונחזור אליכם</h3>
-      <form
-        id="regForm"
-        class="w-full rounded-full border-white py-12 px-24 sm:border-2 lg:py-24"
-      >
-        <div class="tab space-y-4" style="display: none;">
-          <label for="fname" class="text-center font-varela text-4xl font-bold">
-            היי, נעים מאוד <br />
-            מה שמך?
-          </label>
-
-          <input
-            type="text"
-            id="fname"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-            name="name"
-          />
-        </div>
-
-        <div class="tab space-y-4" style="display: none;">
-          <label
-            for="checkbox"
-            class="text-center font-varela text-4xl font-bold"
-          >
-            שמחים להכיר <br />
-            לאחר מילוי הפרטים בטופס זה, אנחנו נייצר עבורך הצעת מחיר
-          </label>
-
-          <div class="flex h-5 items-center justify-center gap-3">
-            <input
-              id="checkbox"
-              name="מסכים_לדיוור"
-              aria-describedby="helper-checkbox-text"
-              type="checkbox"
-              value="a"
-              required
-              class="h-4 w-4 rounded-full border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-            />
-            <label for="checkbox"
-              >אני מאשר/ת לחברת ״DPgarden״ להכין ולשלוח לי הצעת מחיר בהתאם
-              לפרטים שאמסור</label
-            >
-          </div>
-        </div>
-
-        <div class="tab space-y-4" style="display: none;">
-          <label
-            for="typeofgarden"
-            class="text-center font-varela text-4xl font-bold"
-          >
-            מה הוא סוג הגינה שלך?
-          </label>
-          <select
-            name="סוג_הגינה"
-            id="typeofgarden"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-          >
-            <option value="" class="text-black">לחצו כדי לבחור</option>
-            <option value="מרפסת" class="text-black">מרפסת</option>
-            <option value="גג" class="text-black">גג</option>
-            <option value="משרד" class="text-black">משרד</option>
-            <option value="גן" class="text-black">גן</option>
-            <option value="קרקע" class="text-black">קרקע</option>
-            <option value="אחר" class="text-black">אחר</option>
-          </select>
-        </div>
-
-        <div class="tab space-y-4" style="display: none;">
-          <label
-            for="typeofservice"
-            class="text-center font-varela text-4xl font-bold"
-          >
-            באיזה סוג שירות אתה מתעניינן?
-          </label>
-          <select
-            name="שירות"
-            id="typeofservice"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-          >
-            <option value="" class="text-black">לחצו כדי לבחור</option>
-            <option value="הקמה" class="text-black">הקמה</option>
-            <option value="שיפוץ" class="text-black">שיפוץ</option>
-            <option value="טיפול" class="text-black">טיפול</option>
-          </select>
-        </div>
-        <div class="tab space-y-4" style="display: none;">
-          <label for="other" class="text-center font-varela text-4xl font-bold">
-            האם יש עוד דברים בגן שדורשים התייחסות?
-          </label>
-          <select
-            name="דברים_אחרים"
-            id="other"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-          >
-            <option value="" class="text-black">לחצו כדי לבחור</option>
-            <option value="לא" class="text-black">לא</option>
-            <option value="דק" class="text-black">דק</option>
-            <option value="פרגולה" class="text-black">פרגולה</option>
-            <option value="תאורת_גינה" class="text-black">תאורת גינה</option>
-            <option value="ריצוף" class="text-black">ריצוף</option>
-            <option value="טיפול" class="text-black">אחר</option>
-          </select>
-        </div>
-        <div class="tab space-y-4" style="display: none;">
-          <label
-            for="budget"
-            class="text-center font-varela text-4xl font-bold"
-          >
-            כבר חשבת על תקציב?
-          </label>
-
-          <input
-            type="text"
-            id="budget"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-            name="מחיר"
-          />
-        </div>
-        <div class="tab space-y-4" style="display: none;">
-          <label for="date" class="text-center font-varela text-4xl font-bold">
-            למתי תרצו את הפרוייקט?
-          </label>
-          <select
-            name="תאריך_פרוייקט"
-            id="date"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-          >
-            <option value="" class="text-black">לחצו כדי לבחור</option>
-            <option value="מיידי" class="text-black">מיידי</option>
-            <option value="ימים_קרובים" class="text-black">ימים קרובים</option>
-            <option value="חודש_ואילך" class="text-black">חודש ואילך</option>
-          </select>
-        </div>
-        <div class="tab space-y-4" style="display: none;">
-          <label
-            for="fphone"
-            class="text-center font-varela text-4xl font-bold"
-          >
-            כדי שנוכל ליצור קשר נצתרך את מספר הטלפון שלך
-          </label>
-
-          <input
-            type="text"
-            id="fphone"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-            name="טלפון"
-          />
-        </div>
-        <div class="tab space-y-4" style="display: none;">
-          <label for="place" class="text-center font-varela text-4xl font-bold">
-            היכן יתקיים הפרוייקט?
-          </label>
-
-          <input
-            type="text"
-            id="place"
-            placeholder="לדוגמא: רחובות"
-            required
-            class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
-            name="מיקום_הפרוייקט"
-          />
-        </div>
-
-        <div
-          class="mt-4 flex w-full flex-row items-center justify-center gap-4 text-lg lg:text-2xl"
-        >
-          <button
-            type="button"
-            id="prevBtn"
-            class="rounded-full border-4 border-white px-6 py-2"
-            onclick="nextPrev(-1)">הקודם</button
-          >
-          <button
-            type="button"
-            id="nextBtn"
-            class="rounded-full border-4 border-white px-6 py-2"
-            onclick="nextPrev(1)">הבא</button
-          >
-        </div>
-        <div
-          class="mt-4 h-4 w-full rounded-full bg-gray-200"
-          style="display: none;"
-          id="progress"
-        >
-          <div
-            class="h-4 rounded-full bg-blue-600 transition-all duration-300 ease-in-out"
-            style="width: 75%"
-          >
-          </div>
-        </div>
-      </form>
+    <img
+      src="/grass.jpg"
+      alt=""
+      class="mt-7 h-[260px] w-full object-cover object-center xl:h-[560px]"
+    />
+    <section class="px-3 py-8">
+      <h4 class="font-varela text-5xl font-bold">עיצוב גינות</h4>
+      <Sep />
+      <p class="mx-auto max-w-5xl text-lg md:text-2xl">
+        אנו מתאימים את העיצוב וההקמה לצרכי הלקוח והסביבה בה הגן יוקם. אנו מתמחים
+        בהקמת גנים ירוקים ומיוחדים עם תפיסה ייחודית לפרטיות ואסתטיקה.הגנים שאנו
+        מקימים מציעים חללים פתוחים, מרחבי נוף ופרטיות, כולל מתקני מים, כמו
+        בריכות ומעיינות, צמחיה ירוקה ומעוצבת, דשא, מערכות תאורה ומערכות השקייה
+        חכמות.
+      </p>
+      <p class="mx-auto mt-4 max-w-5xl text-lg md:text-2xl lg:mt-6">
+        אנו גם מתמחים בהקמת בריכות יוקרתיות ומעוצבות המשלבות טכנולוגיות מתקדמות
+        לטובת חוויית הלקוח. הגנים שאנו מקימים נוצרים בהתאם לצרכי הלקוח והם
+        יכולים להיות מעוצבים לתאומים את הסגנון האישי שלכם וליצור מראה ייחודי
+        ומרהיב לחצר או לבית שלכם.
+      </p>
+      <a
+        href="#calculator"
+        class="mx-auto mt-3 flex w-fit flex-row items-center justify-between gap-4 whitespace-nowrap rounded-2xl border-b-4 border-gray-300 bg-stone-800 px-2 py-1 pr-4 text-center text-lg text-white transition-all hover:mt-2 hover:border-b-8 active:translate-y-1 active:border-b-4"
+        >למחשבון הצעת מחיר לעצוב גינה<i class="fa-regular fa-face-smile"></i>
+      </a>
     </section>
   </main>
-  <!-- step form -->
-  <script is:inline>
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
 
-    function showTab(n) {
-      // This function will display the specified tab of the form ...
-      var x = document.getElementsByClassName("tab");
-      x[n].style.display = "block";
-      // ... and fix the Previous/Next buttons:
-      if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-      } else {
-        document.getElementById("prevBtn").style.display = "inline";
-      }
-      if (n == x.length - 1) {
-        document.getElementById("nextBtn").innerHTML = "שלח";
-      } else {
-        document.getElementById("nextBtn").innerHTML = "הבא";
-      }
-    }
+  <section
+    id="calculator"
+    class="flex h-screen w-full flex-col items-center justify-center space-y-3 bg-stone-900 px-5 text-white"
+  >
+    <h1 class="font-heebo text-6xl font-black">מחשבון הצעת מחיר</h1>
+    <h3 class="font-heebo text-3xl font-bold">מלאו את הפרטים ונחזור אליכם</h3>
+    <form
+      id="regForm"
+      class="w-full rounded-full border-white py-12 px-24 sm:border-2 lg:py-24"
+    >
+      <div class="tab space-y-4" style="display: none;">
+        <label for="fname" class="text-center font-varela text-4xl font-bold">
+          היי, נעים מאוד <br />
+          מה שמך?
+        </label>
 
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("tab");
-      // Exit the function if any field in the current tab is invalid:
-      if (n == 1 && !validateForm()) return false;
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // if you have reached the end of the form... :
-      if (currentTab >= x.length) {
-        //...the form gets submitted:
-        document.getElementById("regForm").submit();
-        return false;
-      }
-      var progressbar = document.getElementById("progress");
-      progressbar.style.display = "block";
-      progressbar.children[0].style.width =
-        ((currentTab / x.length) * 100).toString() + "%";
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
+        <input
+          type="text"
+          id="fname"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+          name="name"
+        />
+      </div>
 
-    function validateForm() {
-      // This function deals with validation of the form fields
-      var x,
-        y,
-        i,
-        valid = true;
-      x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsByTagName("input");
-      if (y.length == 0) {
-        y = x[currentTab].getElementsByTagName("select");
-      }
-      // A loop that checks every input field in the current tab:
-      for (i = 0; i < y.length; i++) {
-        // If a field is empty...
-        console.log(!y[i].checked);
-        if (
-          (y[i].value == "" ||
-            (!y[i].checked && y[i].type == "checkbox") ||
-            (y[i].name == "טלפון" && !/^\d+$/.test(y[i].value))) &&
-          y[i].required == true
-        ) {
-          // add an "invalid" class to the field:
-          y[i].className += " border-red-600";
-          // and set the current valid status to false:
-          valid = false;
-        }
-      }
+      <div class="tab space-y-4" style="display: none;">
+        <label
+          for="checkbox"
+          class="text-center font-varela text-4xl font-bold"
+        >
+          שמחים להכיר <br />
+          לאחר מילוי הפרטים בטופס זה, אנחנו נייצר עבורך הצעת מחיר
+        </label>
 
-      return valid; // return the valid status
-    }
-  </script>
-  <!-- accesibility -->
-  <script>
-    const callback = function (entries: IntersectionObserverEntry[]) {
-      entries.forEach((entry: IntersectionObserverEntry) => {
-        console.log(entry);
+        <div class="flex h-5 items-center justify-center gap-3">
+          <input
+            id="checkbox"
+            name="מסכים_לדיוור"
+            aria-describedby="helper-checkbox-text"
+            type="checkbox"
+            value="a"
+            required
+            class="h-4 w-4 rounded-full border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+          />
+          <label for="checkbox"
+            >אני מאשר/ת לחברת ״DPgarden״ להכין ולשלוח לי הצעת מחיר בהתאם לפרטים
+            שאמסור</label
+          >
+        </div>
+      </div>
 
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fadeIn");
-        } else {
-          entry.target.classList.remove("animate-fadeIn");
-        }
-      });
-    };
-    const observer = new IntersectionObserver(callback);
+      <div class="tab space-y-4" style="display: none;">
+        <label
+          for="typeofgarden"
+          class="text-center font-varela text-4xl font-bold"
+        >
+          מה הוא סוג הגינה שלך?
+        </label>
+        <select
+          name="סוג_הגינה"
+          id="typeofgarden"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+        >
+          <option value="" class="text-black">לחצו כדי לבחור</option>
+          <option value="מרפסת" class="text-black">מרפסת</option>
+          <option value="גג" class="text-black">גג</option>
+          <option value="משרד" class="text-black">משרד</option>
+          <option value="גן" class="text-black">גן</option>
+          <option value="קרקע" class="text-black">קרקע</option>
+          <option value="אחר" class="text-black">אחר</option>
+        </select>
+      </div>
 
-    const targets = document.querySelectorAll(".js-show-on-scroll");
-    targets.forEach(function (target) {
-      target.classList.add("opacity-0");
-      observer.observe(target);
-    });
-  </script>
+      <div class="tab space-y-4" style="display: none;">
+        <label
+          for="typeofservice"
+          class="text-center font-varela text-4xl font-bold"
+        >
+          באיזה סוג שירות אתה מתעניינן?
+        </label>
+        <select
+          name="שירות"
+          id="typeofservice"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+        >
+          <option value="" class="text-black">לחצו כדי לבחור</option>
+          <option value="הקמה" class="text-black">הקמה</option>
+          <option value="שיפוץ" class="text-black">שיפוץ</option>
+          <option value="טיפול" class="text-black">טיפול</option>
+        </select>
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label for="other" class="text-center font-varela text-4xl font-bold">
+          האם יש עוד דברים בגן שדורשים התייחסות?
+        </label>
+        <select
+          name="דברים_אחרים"
+          id="other"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+        >
+          <option value="" class="text-black">לחצו כדי לבחור</option>
+          <option value="לא" class="text-black">לא</option>
+          <option value="דק" class="text-black">דק</option>
+          <option value="פרגולה" class="text-black">פרגולה</option>
+          <option value="תאורת_גינה" class="text-black">תאורת גינה</option>
+          <option value="ריצוף" class="text-black">ריצוף</option>
+          <option value="טיפול" class="text-black">אחר</option>
+        </select>
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label for="budget" class="text-center font-varela text-4xl font-bold">
+          כבר חשבת על תקציב?
+        </label>
+
+        <input
+          type="text"
+          id="budget"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+          name="מחיר"
+        />
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label for="date" class="text-center font-varela text-4xl font-bold">
+          למתי תרצו את הפרוייקט?
+        </label>
+        <select
+          name="תאריך_פרוייקט"
+          id="date"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+        >
+          <option value="" class="text-black">לחצו כדי לבחור</option>
+          <option value="מיידי" class="text-black">מיידי</option>
+          <option value="ימים_קרובים" class="text-black">ימים קרובים</option>
+          <option value="חודש_ואילך" class="text-black">חודש ואילך</option>
+        </select>
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label for="fphone" class="text-center font-varela text-4xl font-bold">
+          כדי שנוכל ליצור קשר נצתרך את מספר הטלפון שלך
+        </label>
+
+        <input
+          type="text"
+          id="fphone"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+          name="טלפון"
+        />
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label for="place" class="text-center font-varela text-4xl font-bold">
+          היכן יתקיים הפרוייקט?
+        </label>
+
+        <input
+          type="text"
+          id="place"
+          placeholder="לדוגמא: רחובות"
+          required
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+          name="מיקום_הפרוייקט"
+        />
+      </div>
+      <div class="tab space-y-4" style="display: none;">
+        <label
+          for="fmessage"
+          class="text-center font-varela text-4xl font-bold"
+        >
+          עוד משהו שאנו צריכים לדעת?
+        </label>
+
+        <input
+          type="text"
+          id="fmessage"
+          class="mx-auto w-full rounded-full border-4 border-inherit bg-transparent py-2 px-4 font-varela text-2xl text-white"
+          name="הודעה"
+        />
+      </div>
+
+      <div
+        class="mt-4 flex w-full flex-row items-center justify-center gap-4 text-lg lg:text-2xl"
+      >
+        <button
+          type="button"
+          id="prevBtn"
+          class="rounded-full border-4 border-white px-6 py-2"
+          onclick="nextPrev(-1)">הקודם</button
+        >
+        <button
+          type="button"
+          id="nextBtn"
+          class="rounded-full border-4 border-white px-6 py-2"
+          onclick="nextPrev(1)">הבא</button
+        >
+      </div>
+      <div
+        class="mt-4 h-4 w-full rounded-full bg-gray-200"
+        style="display: none;"
+        id="progress"
+      >
+        <div
+          class="h-4 rounded-full bg-blue-600 transition-all duration-300 ease-in-out"
+          style="width: 75%"
+        >
+        </div>
+      </div>
+    </form>
+  </section>
 </Layout>
+<!-- step form -->
+<script is:inline>
+  var currentTab = 0; // Current tab is set to be the first tab (0)
+  showTab(currentTab); // Display the current tab
+
+  function showTab(n) {
+    // This function will display the specified tab of the form ...
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+    // ... and fix the Previous/Next buttons:
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == x.length - 1) {
+      document.getElementById("nextBtn").innerHTML = "שלח";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "הבא";
+    }
+  }
+
+  function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = document.getElementsByClassName("tab");
+    // Exit the function if any field in the current tab is invalid:
+    if (n == 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentTab].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+      //...the form gets submitted:
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    var progressbar = document.getElementById("progress");
+    progressbar.style.display = "block";
+    progressbar.children[0].style.width =
+      ((currentTab / x.length) * 100).toString() + "%";
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+  }
+
+  function validateForm() {
+    // This function deals with validation of the form fields
+    var x,
+      y,
+      i,
+      valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    if (y.length == 0) {
+      y = x[currentTab].getElementsByTagName("select");
+    }
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      console.log(!y[i].checked);
+      if (
+        (y[i].value == "" ||
+          (!y[i].checked && y[i].type == "checkbox") ||
+          (y[i].name == "טלפון" && !/^\d+$/.test(y[i].value))) &&
+        y[i].required == true
+      ) {
+        // add an "invalid" class to the field:
+        y[i].className += " border-red-600";
+        // and set the current valid status to false:
+        valid = false;
+      }
+    }
+
+    return valid; // return the valid status
+  }
+</script>
+<!-- accesibility -->
+<script>
+  const callback = function (entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      console.log(entry);
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeIn");
+      } else {
+        entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll(".js-show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+</script>
