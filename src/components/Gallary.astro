@@ -1,94 +1,67 @@
-<div class="-z-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+---
+const GALLARYPATH = "gallary/";
+const GALLAYIMAGES = Array.from({ length: 17 }, (_, i) => i + 1);
+---
+
+<div class="-z-10 grid grid-cols-2 gap-4 md:grid-cols-4" id="gallery">
   <div class="grid gap-4">
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-        alt=""
-      />
-    </div>
+    {
+      GALLAYIMAGES.slice(0, GALLAYIMAGES.length / 4).map((image) => (
+        <div class="">
+          <img
+            src={GALLARYPATH + image + ".jpg"}
+            alt=""
+            class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
+          />
+        </div>
+      ))
+    }
   </div>
   <div class="grid gap-4">
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-        alt=""
-      />
-    </div>
+    {
+      GALLAYIMAGES.slice(GALLAYIMAGES.length / 4, GALLAYIMAGES.length / 2).map(
+        (image) => (
+          <div class="">
+            <img
+              src={GALLARYPATH + image + ".jpg"}
+              alt=""
+              class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
+            />
+          </div>
+        )
+      )
+    }
   </div>
   <div class="grid gap-4">
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-        alt=""
-      />
-    </div>
+    {
+      GALLAYIMAGES.slice(
+        GALLAYIMAGES.length / 2,
+        (GALLAYIMAGES.length / 4) * 3
+      ).map((image) => (
+        <div class="">
+          <img
+            src={GALLARYPATH + image + ".jpg"}
+            alt=""
+            class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
+          />
+        </div>
+      ))
+    }
   </div>
   <div class="grid gap-4">
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
-        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-        alt=""
-      />
-    </div>
+    {
+      GALLAYIMAGES.slice(
+        (GALLAYIMAGES.length / 4) * 3,
+        GALLAYIMAGES.length
+      ).map((image) => (
+        <div class="">
+          <img
+            src={GALLARYPATH + image + ".jpg"}
+            alt=""
+            class="js-show-on-scroll h-auto max-w-full rounded-lg transition-all duration-300 ease-out hover:brightness-90"
+          />
+        </div>
+      ))
+    }
   </div>
 </div>

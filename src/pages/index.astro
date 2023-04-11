@@ -521,6 +521,30 @@ import Gallary from "../components/Gallary.astro";
     return valid; // return the valid status
   }
 </script>
+<script>
+  const fs = require("fs");
+  const path = require("path");
+
+  const directoryPath = "/gallery";
+
+  fs.readdir(directoryPath, function (err, files) {
+    if (err) {
+      console.log("Error getting directory information.");
+    } else {
+      files.forEach(function (file) {
+        console.log(file);
+        fs.readFile(
+          path.join(directoryPath, file),
+          "utf8",
+          function (err, data) {
+            if (err) throw err;
+            console.log(data);
+          }
+        );
+      });
+    }
+  });
+</script>
 <!-- accesibility -->
 <script>
   const callback = function (entries: IntersectionObserverEntry[]) {
