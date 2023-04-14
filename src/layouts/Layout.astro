@@ -38,8 +38,7 @@ const { title } = Astro.props;
 
     <a
       href="https://wa.me/972505046570"
-      data-ripple-light="true"
-      class="fixed bottom-4 left-4 w-fit rounded-full bg-green-500 p-3 text-slate-600 hover:-translate-y-2 hover:scale-105"
+      class="fixed bottom-4 left-4 w-fit rounded-full bg-green-500 p-3 text-slate-600 transition-all duration-150 hover:-translate-y-2 hover:scale-105"
       ><i class="fa-whatsapp fa-brands fa-3x xl:4x aspect-square text-white"
       ></i></a
     >
@@ -47,10 +46,6 @@ const { title } = Astro.props;
     <!-- Flowbite -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"
-    ></script>
-    <!-- Ripple -->
-    <script
-      src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"
     ></script>
   </body>
 </html>
